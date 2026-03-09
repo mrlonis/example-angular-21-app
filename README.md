@@ -66,6 +66,36 @@ UPDATE src/styles.scss (1259 bytes)
 UPDATE src/index.html (638 bytes)
 ```
 
+## Adding angular-eslint
+
+```shell
+npm run ng -- add angular-eslint
+
+> example-angular-21-app@0.0.0 ng
+> ng add angular-eslint
+
+✔ Determining Package Manager
+  › Using package manager: npm
+✔ Searching for compatible package version
+  › Found compatible package version: 21.3.0.
+✔ Loading package information
+✔ Confirming installation
+✔ Installing package
+
+    All angular-eslint dependencies have been successfully installed 🎉
+
+    Please see https://github.com/angular-eslint/angular-eslint for how to add ESLint configuration to your project.
+
+    We detected that you have a single project in your workspace and no existing linter wired up, so we are configuring ESLint for you automatically.
+
+    Please see https://github.com/angular-eslint/angular-eslint for more information.
+
+CREATE eslint.config.js (1004 bytes)
+UPDATE package.json (1008 bytes)
+UPDATE angular.json (2389 bytes)
+✔ Packages installed successfully.
+```
+
 ## Development server
 
 To start a local development server, run:
