@@ -38,6 +38,7 @@
     "@eslint/js": "^10",
     "angular-eslint": "21",
     "eslint": "^10",
+    "husky": "^9.1.7",
     "jsdom": "^28",
     "lint-staged": "^16",
     "ng-lint-staged": "^12",
