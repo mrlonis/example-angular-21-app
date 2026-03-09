@@ -114,8 +114,8 @@
           "builder": "@cypress/schematic:cypress",
           "options": {
             "devServerTarget": "example-angular-21-app:serve",
-            "watch": true,
-            "headless": false
+            "watch": false,
+            "headless": true
           },
           "configurations": {
             "production": {
