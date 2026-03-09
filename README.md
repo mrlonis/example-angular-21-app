@@ -96,6 +96,47 @@ UPDATE angular.json (2389 bytes)
 ✔ Packages installed successfully.
 ```
 
+## Adding cypress
+
+```shell
+npm run ng -- e2e
+
+> example-angular-21-app@0.0.0 ng
+> ng e2e
+
+Cannot find "e2e" target for the specified project.
+You can add a package that implements these capabilities.
+
+For example:
+  Playwright: ng add playwright-ng-schematics
+  Cypress: ng add @cypress/schematic
+  Nightwatch: ng add @nightwatch/schematics
+  WebdriverIO: ng add @wdio/schematics
+  Puppeteer: ng add @puppeteer/ng-schematics
+
+Would you like to add a package with "e2e" capabilities now? Cypress
+✔ Determining Package Manager
+  › Using package manager: npm
+✔ Searching for compatible package version
+  › Found compatible package version: 5.0.0.
+✔ Loading package information
+✔ Confirming installation
+✔ Installing package
+✔ Would you like the default `ng e2e` command to use Cypress? [ Protractor to Cypress Migration Guide: https://on.cypress.io/protractor-to-cypress?cli=true ] Yes
+✔ Would you like to add Cypress component testing?  This will add all files needed for Cypress component testing. Yes
+CREATE cypress.config.ts (264 bytes)
+CREATE cypress/tsconfig.json (139 bytes)
+CREATE cypress/e2e/spec.cy.ts (142 bytes)
+CREATE cypress/fixtures/example.json (85 bytes)
+CREATE cypress/support/commands.ts (1377 bytes)
+CREATE cypress/support/e2e.ts (649 bytes)
+CREATE cypress/support/component-index.html (290 bytes)
+CREATE cypress/support/component.ts (1132 bytes)
+UPDATE package.json (1432 bytes)
+UPDATE angular.json (3798 bytes)
+✔ Packages installed successfully.
+```
+
 ## Development server
 
 To start a local development server, run:
