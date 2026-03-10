@@ -1,26 +1,21 @@
 import { TestBed } from '@angular/core/testing';
-import { App } from './app';
-import { provideRouter, Router } from '@angular/router';
-import { routes } from './app.routes';
+import { DefaultComponent } from './default.component';
 
-describe('App', () => {
+describe('DefaultComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [App],
-      providers: [provideRouter(routes)],
+      imports: [DefaultComponent],
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(App);
+  it('should create the DefaultComponent', () => {
+    const fixture = TestBed.createComponent(DefaultComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
   it('should render title', async () => {
-    const router = TestBed.inject(Router);
-    const fixture = TestBed.createComponent(App);
-    await router.navigate(['']);
+    const fixture = TestBed.createComponent(DefaultComponent);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, example-angular-21-app');

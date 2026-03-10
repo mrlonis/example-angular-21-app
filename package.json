@@ -8,10 +8,12 @@
     "cypress:run": "cypress run",
     "e2e": "ng e2e",
     "lint": "ng lint",
+    "lint:fix": "npm run lint -- --fix",
     "ng": "ng",
     "prepare": "husky",
     "start": "ng serve",
     "test": "ng test",
+    "test:ci": "ng test --no-watch",
     "watch": "ng build --watch --configuration development"
   },
   "lint-staged": {
