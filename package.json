@@ -12,7 +12,7 @@
     "ng": "ng",
     "prepare": "husky",
     "start": "ng serve",
-    "test": "ng test",
+    "test": "npm run lint && npm run test:ci",
     "test:ci": "ng test --no-watch",
     "watch": "ng build --watch --configuration development"
   },
