@@ -1,4 +1,4 @@
-<table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8" [trackBy]="trackBy">
   @for (column of columnsToDisplay; track column) {
     <ng-container matColumnDef="{{ column }}">
       <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
@@ -40,7 +40,7 @@
     </td>
   </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="columnsToDisplayWithExpand"></tr>
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplayWithExpand; sticky: true"></tr>
   <tr
     mat-row
     *matRowDef="let element; columns: columnsToDisplayWithExpand"
@@ -50,3 +50,11 @@
   ></tr>
   <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
 </table>
+<mat-paginator
+  [length]="dataSource.data.length"
+  [pageSize]="10"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+  showFirstLastButtons
+  aria-label="Select page"
+>
+</mat-paginator>
