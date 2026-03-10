@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { PERIODIC_ELEMENTS, PeriodicElement } from '../../interfaces';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 /**
  * @title Table with expandable rows
@@ -12,7 +13,7 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
   selector: 'app-table',
   styleUrl: 'table.component.scss',
   templateUrl: 'table.component.html',
-  imports: [MatButtonModule, MatIconModule, MatPaginatorModule, MatTableModule],
+  imports: [MatButtonModule, MatIconModule, MatPaginatorModule, MatTableModule, ScrollingModule],
 })
 export class TableComponent implements AfterViewInit {
   dataSource = new MatTableDataSource<PeriodicElement>(PERIODIC_ELEMENTS);
